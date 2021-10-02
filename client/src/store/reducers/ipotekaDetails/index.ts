@@ -21,6 +21,8 @@ export default function ipotekaDetailsReducer(
       return { ...state, errorDetails: action.payload, details: null, isLoading: false };
     case IpotekaDetailsActionsEnum.SET_DETAILS:
       return { ...state, details: action.payload };
+    case IpotekaDetailsActionsEnum.CLEAR_DETAILS_STATE:
+      return { ...initialState };
     default:
       return state;
   }

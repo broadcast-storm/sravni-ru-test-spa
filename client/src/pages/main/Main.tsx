@@ -13,12 +13,15 @@ export interface ISearchParams {
 }
 
 const Main: FC = () => {
-  const { fetchIpotekaList } = useActions();
+  const { fetchIpotekaList, clearListState } = useActions();
   const [searchParams, setSearchParams] = useState<ISearchParams>({} as ISearchParams);
   const [isFirstFetchDone, setIsFirstFetchDone] = useState(false);
 
   useEffect(() => {
     fetchIpotekaList();
+    return () => {
+      clearListState();
+    };
   }, []);
 
   useEffect(() => {

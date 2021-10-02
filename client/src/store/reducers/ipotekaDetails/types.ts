@@ -10,6 +10,7 @@ export enum IpotekaDetailsActionsEnum {
   SET_DETAILS = 'SET_DETAILS',
   SET_ERROR_DETAILS = 'SET_ERROR_DETAILS',
   SET_IS_DETAILS_LOADING = 'SET_IS_DETAILS_LOADING',
+  CLEAR_DETAILS_STATE = 'CLEAR_DETAILS_STATE',
 }
 
 export interface SetErrorAction {
@@ -27,7 +28,12 @@ export interface SetIsLoadingAction {
   payload: boolean;
 }
 
+export interface ClearDetailsStateAction {
+  type: IpotekaDetailsActionsEnum.CLEAR_DETAILS_STATE;
+}
+
 export type IpotekaDetailsAction =
   | SetErrorAction
   | SetIpotekaDetailsAction
-  | SetIsLoadingAction;
+  | SetIsLoadingAction
+  | ClearDetailsStateAction;

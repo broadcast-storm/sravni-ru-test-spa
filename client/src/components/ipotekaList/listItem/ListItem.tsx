@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { IIpoteka } from '../../../models/IIpoteka';
+import sklonenie from '../../../utils/sklonenie';
 import styles from './styles.module.css';
 
 interface ListItemProps {
@@ -14,9 +15,13 @@ const ListItem: FC<ListItemProps> = ({ item }) => {
     const term = item.rate.periods[0].term.to;
     const unit = item.rate.periods[0].termUnit;
     if (term < 12 && unit === 'month') {
-      return `${term} месяцев`;
+      return `${term} ${sklonenie(term, ['месяц', 'месяца', 'месяцев'])}`;
     }
-    return `${Math.floor(term / 12)} лет`;
+    return `${Math.floor(term / 12)} ${sklonenie(Math.floor(term / 12), [
+      'года',
+      'лет',
+      'лет',
+    ])}`;
   };
   return (
     <div className={styles['item']}>
@@ -24,7 +29,7 @@ const ListItem: FC<ListItemProps> = ({ item }) => {
         <div className={styles['item__logo']}>
           <img
             className={styles['img']}
-            src={'http://localhost:4000' + item.organization.customLogoUrl}
+            src={process.env.REACT_APP_API_URL + item.organization.customLogoUrl}
             alt={item.organization.name}
           />
         </div>
@@ -47,13 +52,24 @@ const ListItem: FC<ListItemProps> = ({ item }) => {
       <div className={styles['item__column']}>
         <div className={styles['item__requirements']}>
           <span className={styles['param']}>
-            Возраст от {item.customerRequirements.age} лет
+            Возраст от {item.customerRequirements.age}{' '}
+            {sklonenie(item.customerRequirements.age, ['года', 'лет', 'лет'])}
           </span>
           <span className={styles['param']}>
-            Стаж от {item.customerRequirements.fullExperience} месяцев
+            Стаж от {item.customerRequirements.lastExperience}{' '}
+            {sklonenie(item.customerRequirements.lastExperience, [
+              'месяца',
+              'месяцев',
+              'месяцев',
+            ])}
           </span>
           <span className={styles['param']}>
-            {item.customerRequirements.documents} документов
+            {item.customerRequirements.documents}{' '}
+            {sklonenie(item.customerRequirements.documents, [
+              'документ',
+              'документа',
+              'документов',
+            ])}
           </span>
         </div>
       </div>

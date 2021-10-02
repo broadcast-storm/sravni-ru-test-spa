@@ -14,7 +14,7 @@ export default class IpotekaService {
     params?: params,
   ): Promise<AxiosResponse<{ items: IIpoteka[]; total: number }>> {
     return axios.get<{ items: IIpoteka[]; total: number }>(
-      'http://localhost:4000/api/data/',
+      `${process.env.REACT_APP_API_URL}/api/data/`,
       {
         params: {
           dataPart,
@@ -24,6 +24,6 @@ export default class IpotekaService {
     );
   }
   static async getIpotekaDetails(id: string): Promise<AxiosResponse<IIpoteka>> {
-    return axios.get<IIpoteka>(`http://localhost:4000/api/data/${id}`);
+    return axios.get<IIpoteka>(`${process.env.REACT_APP_API_URL}/api/data/${id}`);
   }
 }

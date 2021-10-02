@@ -13,6 +13,7 @@ export enum IpotekasActionsEnum {
   SET_ERROR = 'SET_ERROR',
   SET_IS_LOADING = 'SET_IS_LOADING',
   SET_IS_LOADING_MORE = 'SET_IS_LOADING_MORE',
+  CLEAR_LIST_STATE = 'CLEAR_LIST_STATE',
 }
 
 export interface SetErrorAction {
@@ -35,8 +36,13 @@ export interface SetIsLoadingMoreAction {
   payload: boolean;
 }
 
+export interface ClearListStateAction {
+  type: IpotekasActionsEnum.CLEAR_LIST_STATE;
+}
+
 export type IpotekasAction =
   | SetErrorAction
   | SetIpotekasAction
   | SetIsLoadingAction
-  | SetIsLoadingMoreAction;
+  | SetIsLoadingMoreAction
+  | ClearListStateAction;

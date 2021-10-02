@@ -2,6 +2,7 @@ import IpotekaService from '../../../api/IpotekaService';
 import { IIpoteka } from '../../../models/IIpoteka';
 import { AppDispatch } from '../..';
 import {
+  ClearDetailsStateAction,
   IpotekaDetailsActionsEnum,
   SetErrorAction,
   SetIpotekaDetailsAction,
@@ -20,6 +21,9 @@ export const IpotekaDetailsActionCreators = {
   setError: (error: string): SetErrorAction => ({
     type: IpotekaDetailsActionsEnum.SET_ERROR_DETAILS,
     payload: error,
+  }),
+  clearDetailsState: (): ClearDetailsStateAction => ({
+    type: IpotekaDetailsActionsEnum.CLEAR_DETAILS_STATE,
   }),
   fetchIpotekaDetails: (id: string) => async (dispatch: AppDispatch) => {
     try {

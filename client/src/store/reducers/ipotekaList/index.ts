@@ -33,6 +33,10 @@ export default function ipotekaListReducer(
           : [...state.items, ...action.payload.items],
         total: action.payload.total,
       };
+    case IpotekasActionsEnum.CLEAR_LIST_STATE:
+      return {
+        ...initialState,
+      };
     default:
       return state;
   }

@@ -7,12 +7,14 @@
 }
 
 .container {
+  box-sizing: border-box;
   width: 100%;
   max-width: 1170px;
   background-color: white;
   border: 1px solid #dddede;
   border-radius: 4px;
   height: 90vh;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .alert-screen {
@@ -20,4 +22,129 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header-container {
+  background-color: #ebf0f3;
+  padding: 20px;
+}
+
+.header {
+  color: #3c3e44;
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.logo-container {
+  background-color: white;
+  border: 1px solid #dddede;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo-container .image {
+  max-width: 200px;
+  max-height: 60px;
+  min-width: 150px;
+}
+
+.params-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 30px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dddede;
+}
+
+.params-item {
+  width: calc((100% - 40px) / 3 - 60px);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.params-item .params-item__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.params-item__title .title-image {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.params-item__title .title-text {
+  color: rgb(124, 124, 124);
+}
+
+.params-item__value {
+  font-weight: bold;
+  color: #3c3e44;
+}
+
+.conditions-container {
+  margin: 0 30px;
+}
+
+.conditions-container__title {
+  font-size: 1.3rem;
+  color: #3c3e44;
+}
+
+.conditions-container__item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 10px;
+}
+
+.conditions-container__item:nth-child(2n + 1) {
+  background: #fff;
+}
+.conditions-container__item:nth-child(2n) {
+  background: #f5f7f9;
+}
+
+.item-name,
+.item-value {
+  flex: 1 1;
+  text-align: left;
+}
+
+.item-name {
+  color: gray;
+}
+
+.nav-btn {
+  margin: 30px;
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(13, 209, 73);
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 40px;
+  width: 150px;
+  font-size: 1rem;
+  color: rgb(13, 209, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease 0s;
+}
+
+.nav-btn:hover {
+  background-color: rgb(13, 209, 73);
+  color: white;
 }
