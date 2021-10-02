@@ -2,7 +2,7 @@ import './App.css';
 
 import { FC } from 'react';
 
-import AppRouter from './components/AppRouter';
+import AppRouter from './pages/AppRouter';
 
 const App: FC = () => {
   return (

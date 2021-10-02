@@ -1,7 +1,4 @@
-import React from 'react';
-
-import Details from '../pages/details/Details';
-import Main from '../pages/main/Main';
+import React, { lazy } from 'react';
 
 export interface IRoute {
   path?: string;
@@ -13,6 +10,9 @@ export enum RouteNames {
   MAIN_PAGE = '/',
   DETAILS_PAGE = '/:id',
 }
+
+const Main = lazy(() => import('../pages/main/Main'));
+const Details = lazy(() => import('../pages/details/Details'));
 
 export const routes: IRoute[] = [
   {
