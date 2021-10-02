@@ -43,7 +43,7 @@ const Details: FC = () => {
           </div>
         ) : details === null ? (
           <div className={styles['alert-screen']}>
-            <EmptyAlert />
+            <EmptyAlert showLinkToMainPage={true} />
           </div>
         ) : (
           <>

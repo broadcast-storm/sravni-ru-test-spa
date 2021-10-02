@@ -148,3 +148,54 @@
   background-color: rgb(13, 209, 73);
   color: white;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+  .container {
+    height: 100%;
+    min-height: 100vh;
+  }
+  .alert-screen {
+    height: 90vh;
+  }
+  .header-container {
+    padding: 15px;
+  }
+  .header {
+    font-size: 1.4rem;
+    padding: 0 15px;
+  }
+  .params-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+  .params-item {
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .params-item__title,
+  .params-item__value {
+    width: 50%;
+  }
+
+  .params-item .params-item__title {
+    margin-bottom: 0;
+  }
+  .conditions-container {
+    margin: 0 15px;
+  }
+  .conditions-container__title {
+    font-size: 1.1rem;
+  }
+  .nav-btn {
+    margin: 15px;
+  }
+}

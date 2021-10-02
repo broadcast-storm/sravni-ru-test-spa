@@ -11,3 +11,14 @@
   height: calc(100vh - 222px);
   overflow-y: auto;
 }
+
+@media (max-width: 992px) {
+  .main {
+    min-height: 100vh;
+  }
+  .container {
+    height: auto;
+    background-color: transparent;
+    border-bottom: none;
+  }
+}

@@ -19,6 +19,14 @@
   align-items: center;
 }
 
+.image {
+  width: 200px;
+}
+
+.text {
+  font-size: 1.3rem;
+}
+
 .button {
   padding: 0px 20px;
   text-align: center;
@@ -40,4 +48,13 @@
 .button:hover {
   background-color: rgb(5, 150, 49);
   border: 1px solid rgb(5, 150, 49);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    background-color: white;
+  }
+  .container {
+    border: none;
+  }
 }
