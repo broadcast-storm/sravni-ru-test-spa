@@ -1,0 +1,30 @@
+.sort {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #dddede;
+}
+
+.sort__header {
+  font-size: 1.1rem;
+}
+
+.sort__type-item {
+  font-size: 1.05rem;
+  margin-left: 20px;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+
+.sort__type-item:hover {
+  color: rgb(13, 209, 73);
+}
+
+.sort__type-item_active {
+  color: black;
+  cursor: default;
+}
+
+.sort__type-item_active:hover {
+  color: black;
+}

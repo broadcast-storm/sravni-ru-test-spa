@@ -1,0 +1,13 @@
+.main {
+  background-color: #ebf0f3;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #dddede;
+  border-radius: 4px;
+  height: calc(100vh - 222px);
+  overflow-y: auto;
+}
