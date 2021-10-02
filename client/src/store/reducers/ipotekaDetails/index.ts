@@ -16,9 +16,9 @@ export default function ipotekaDetailsReducer(
 ): IpotekaDetailsState {
   switch (action.type) {
     case IpotekaDetailsActionsEnum.SET_IS_DETAILS_LOADING:
-      return { ...state, isLoading: action.payload };
+      return { ...state, isLoading: action.payload, errorDetails: '' };
     case IpotekaDetailsActionsEnum.SET_ERROR_DETAILS:
-      return { ...state, errorDetails: action.payload, isLoading: false };
+      return { ...state, errorDetails: action.payload, details: null, isLoading: false };
     case IpotekaDetailsActionsEnum.SET_DETAILS:
       return { ...state, details: action.payload };
     default:

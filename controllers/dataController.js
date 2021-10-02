@@ -43,7 +43,7 @@ class DataController {
 
     async getOne(req, res) {
         const {id} = req.params
-        const result = data.find(item => item.id === id)
+        const result = data.find(item => item.id == id)
         await delay(300)
         return res.json(result || null)
     }

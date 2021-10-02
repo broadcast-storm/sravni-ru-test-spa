@@ -21,7 +21,7 @@ export const IpotekaDetailsActionCreators = {
     type: IpotekaDetailsActionsEnum.SET_ERROR_DETAILS,
     payload: error,
   }),
-  fetchIpotekaDetails: (id: number) => async (dispatch: AppDispatch) => {
+  fetchIpotekaDetails: (id: string) => async (dispatch: AppDispatch) => {
     try {
       dispatch(IpotekaDetailsActionCreators.setIsLoading(true));
       const response = await IpotekaService.getIpotekaDetails(id);

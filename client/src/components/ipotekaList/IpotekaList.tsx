@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import EmptyList from '../emptyList/EmptyList';
+import EmptyAlert from '../emptyAlert/EmptyAlert';
 import LoadingError from '../loadingError/LoadingError';
 import LoadingSpinner from '../loadingSpinner/LoadingSpinner';
 import ListItem from './listItem/ListItem';
@@ -32,7 +32,7 @@ const IpotekaList: FC<IpotekaListProps> = ({ submit }) => {
         <>
           {items.length === 0 ? (
             <div className={styles['alert-screen']}>
-              <EmptyList />
+              <EmptyAlert />
             </div>
           ) : (
             items.map((item) => <ListItem item={item} key={item.id} />)

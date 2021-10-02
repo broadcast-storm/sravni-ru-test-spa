@@ -1,0 +1,23 @@
+.wrapper {
+  background-color: #ebf0f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  background-color: white;
+  border: 1px solid #dddede;
+  border-radius: 4px;
+  height: 90vh;
+}
+
+.alert-screen {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
